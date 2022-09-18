@@ -43,7 +43,7 @@ function sumTime($argv): array
     }
     if ((intval($result[1])) > 24)
     {
-        $result[1] = (intval($result[2])) - 24;
+        $result[1] = (intval($result[1])) - 24;
     }
     return ($result);
 }

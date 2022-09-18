@@ -14,7 +14,7 @@ function calculator($argv): int
         }
         else
         {
-            if (strpos($number_check, $char) === true) // Здесь надо организовать проверку, является ли $char символом "-" или "+"
+            if (strpos($number_check, $char) === true)
             {
             $number_arr .= (intval($char));
             }

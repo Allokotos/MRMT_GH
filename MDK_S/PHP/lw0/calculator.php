@@ -6,7 +6,7 @@ function calculator($argv): int
     $number_check = '0123456789';
     $number_arr = [];
     $sum = NULL;
-    foreach (str_split($argv[1]) as $char)
+    foreach (str_split($argv[1]) as $char) // Проверка на неправильный ввод
     {
         if (strpos($full_check, $char) === false)
         {
@@ -14,7 +14,7 @@ function calculator($argv): int
         }
         else
         {
-            if (strpos($number_check, $char) === true)
+            if (strpos($number_check, $char) === true) // Проверка на цифру/символ
             {
             $number_arr .= (intval($char));
             }

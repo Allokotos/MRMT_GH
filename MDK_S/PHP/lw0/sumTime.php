@@ -8,14 +8,14 @@ function sumTime($argv): string
     $result = [];
     foreach (str_split($argv[1]) as $char) {
         if (!(strpos($full_check, $char))) {
-            echo 'Input error!';
+            return 'Input error!';
         } else {
             $date_one = explode(':', $argv[1]);
         }
     }
     foreach (str_split($argv[2]) as $char) {
         if (!(strpos($full_check, $char))) {
-            echo 'Input error!';
+            return 'Input error!';
         } else {
             $date_two = explode(':', $argv[2]);
         }

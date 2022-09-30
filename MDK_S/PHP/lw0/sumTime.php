@@ -9,17 +9,15 @@ function sumTime($argv): string
     foreach (str_split($argv[1]) as $char) {
         if (!(strpos($full_check, $char))) {
             return 'Input error!';
-        } else {
-            $date_one = explode(':', $argv[1]);
         }
     }
+    $date_one = explode(':', $argv[1]);
     foreach (str_split($argv[2]) as $char) {
         if (!(strpos($full_check, $char))) {
             return 'Input error!';
-        } else {
-            $date_two = explode(':', $argv[2]);
         }
     }
+    $date_two = explode(':', $argv[2]);
     $result[0] = (intval($date_one[0])) + (intval($date_two[0]));
     $result[1] = (intval($date_one[1])) + (intval($date_two[1]));
     $result[2] = (intval($date_one[2])) + (intval($date_two[2]));

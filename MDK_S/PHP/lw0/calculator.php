@@ -1,18 +1,18 @@
 <?php
 
-function calculator($argv): string
+function calculator(string $firstString): string
 {
-    $full_check = ' 0123456789+-';
-    $number_check = ' 0123456789';
+    $fullCheck = ' 0123456789+-';
+    $numberCheck = ' 0123456789';
     $tempString = '';
     $numberArr = [];
     $symbolArr = [];
     $sum = 0;
-    foreach (str_split($argv[1]) as $char) {
-        if (!(strpos($full_check, $char))) {
+    foreach (str_split($firstString) as $char) {
+        if (!(strpos($fullCheck, $char))) {
             return 'Input error!';
         } else {
-            if (strpos($number_check, $char)) {
+            if (strpos($numberCheck, $char)) {
                 $tempString .= $char;
             } else {
                 $symbolArr[] = $char;
@@ -47,4 +47,4 @@ function calculator($argv): string
     return ($sum);
 }
 
-echo calculator($argv);
+echo calculator($argv[1]);

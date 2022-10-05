@@ -1,26 +1,26 @@
 <?php
 
-function sumTime($argv): string
+function sumTime(string $firstString, string $secondString): string
 {
-    $full_check = ' 0123456789:';
-    $date_one = [];
-    $date_two = [];
+    $fullCheck = ' 0123456789:';
+    $dateOne = [];
+    $dateTwo = [];
     $result = [];
-    foreach (str_split($argv[1]) as $char) {
-        if (!(strpos($full_check, $char))) {
+    foreach (str_split($firstString) as $char) {
+        if (!(strpos($fullCheck, $char))) {
             return 'Input error!';
         }
     }
-    $date_one = explode(':', $argv[1]);
-    foreach (str_split($argv[2]) as $char) {
-        if (!(strpos($full_check, $char))) {
+    $dateOne = explode(':', $firstString);
+    foreach (str_split($secondString) as $char) {
+        if (!(strpos($fullCheck, $char))) {
             return 'Input error!';
         }
     }
-    $date_two = explode(':', $argv[2]);
-    $result[0] = (intval($date_one[0])) + (intval($date_two[0]));
-    $result[1] = (intval($date_one[1])) + (intval($date_two[1]));
-    $result[2] = (intval($date_one[2])) + (intval($date_two[2]));
+    $dateTwo = explode(':', $secondString);
+    $result[0] = (intval($dateOne[0])) + (intval($dateTwo[0]));
+    $result[1] = (intval($dateOne[1])) + (intval($dateTwo[1]));
+    $result[2] = (intval($dateOne[2])) + (intval($dateTwo[2]));
     if ((intval($result[2])) > 59) {
         $result[1] = (intval($result[1])) + 1;
         $result[2] = (intval($result[2])) - 60;
@@ -35,4 +35,4 @@ function sumTime($argv): string
     return "$result[0]:$result[1]:$result[2]";
 }
 
-echo sumTime($argv);
+echo sumTime($argv[1], $argv[2]);

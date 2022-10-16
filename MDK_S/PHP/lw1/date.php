@@ -70,6 +70,8 @@ class Date
             case 'en':
                 echo "$this->year-$this->month-$this->day";
                 break;
+            default:
+                echo "Wrong mode";
         }
     }
 }

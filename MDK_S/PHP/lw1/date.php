@@ -4,7 +4,7 @@ class Date
 {
     private int $day, $month, $year;
 
-    public static array $daysOfWeek = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    public static array $daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     public function __construct(int $day, int $month, int $year)
     {
@@ -22,60 +22,54 @@ class Date
             $this->year = $year;
         } else {
             $this->year = 1;
-        }        
+        }
     }
 
     public function diffDay(Date $dateTwo): int
     {
-        int $dateOneSum, $dateTwoSum, $dayDifference;
-        $dateOneSum = ($year * 365) + ($month * 31) + $day;
-        $dateTwoSum = ($dateTwo.year * 365) + ($dateTwo.month * 31) + $dateTwo.day;
+        $dateOneSum = $dateTwoSum = $dayDifference = 0;
+        $dateOneSum = ($this->year * 365) + ($this->month * 31) + $this->day;
+        $dateTwoSum = ($dateTwo . year * 365) + ($dateTwo . month * 31) + $dateTwo . day;
         $dayDifference = $dateOneSum - $dateTwoSum;
-        if ($dayDifference < 0)
-        {
+        if ($dayDifference < 0) {
             $dayDifference = $dayDifference * (-1);
             return $dayDifference;
-        }
-        else
-        {
+        } else {
             return $dayDifference;
         }
     }
 
     public function minusDay(int $removedDays)
     {
-        $day = $day - $removedDays;
-        while ($day < 1)
-        {
-            $month--;
-            $day = $day + 31;
+        $this->day = $this->day - $removedDays;
+        while ($this->day < 1) {
+            $this->month--;
+            $this->day = $this->day + 31;
         }
-        while ($month < 1)
-        {
-            $year--;
-            $month = $month + 12;
+        while ($this->month < 1) {
+            $this->year--;
+            $this->month = $this->month + 12;
         }
         format('ru');
     }
 
     public function getDateOfWeek(): string
     {
-        int $dateSum, $dateName;
-        $dateSum = ($year * 365) + ($month * 31) + $day;
+        $dateSum = $dateName = 0;
+        $dateSum = ($this->year * 365) + ($this->month * 31) + $this->day;
         $dateName = $dateSum % 7;
-        return $daysOfWeek[$dateName];
+        return self::$daysOfWeek[$dateName];
     }
 
     public function format(string $mode): void
     {
-	    switch ($mode) 
-	    {
-		    case 'ru':
-			    echo "$day.$month.$year";
-			    break;
-		    case 'en':
-			    echo "$year-$month-$day";
-			    break;
+        switch ($mode) {
+            case 'ru':
+                echo "$this->day.$this->month.$this->year";
+                break;
+            case 'en':
+                echo "$this->year-$this->month-$this->day";
+                break;
         }
     }
 }

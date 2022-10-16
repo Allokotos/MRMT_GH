@@ -29,7 +29,7 @@ class Date
     {
         $dateOneSum = $dateTwoSum = $dayDifference = 0;
         $dateOneSum = ($this->year * 365) + ($this->month * 31) + $this->day;
-        $dateTwoSum = ($dateTwo . year * 365) + ($dateTwo . month * 31) + $dateTwo . day;
+        $dateTwoSum = ($dateTwo->year * 365) + ($dateTwo->month * 31) + $dateTwo->day;
         $dayDifference = $dateOneSum - $dateTwoSum;
         if ($dayDifference < 0) {
             $dayDifference = $dayDifference * (-1);

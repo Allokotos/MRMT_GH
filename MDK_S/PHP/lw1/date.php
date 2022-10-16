@@ -50,7 +50,7 @@ class Date
             $this->year--;
             $this->month = $this->month + 12;
         }
-        format('ru');
+        $this->format('ru');
     }
 
     public function getDateOfWeek(): string

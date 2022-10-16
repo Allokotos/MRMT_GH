@@ -25,7 +25,7 @@ class Date
         }
     }
 
-    public function diffDay(Date $dateTwo): int
+    public function diffDay(Date $dateTwo): void
     {
         $dateOneSum = $dateTwoSum = $dayDifference = 0;
         $dateOneSum = ($this->year * 365) + ($this->month * 31) + $this->day;
@@ -33,9 +33,9 @@ class Date
         $dayDifference = $dateOneSum - $dateTwoSum;
         if ($dayDifference < 0) {
             $dayDifference = $dayDifference * (-1);
-            return $dayDifference;
+            echo "$dayDifference"."\n";
         } else {
-            return $dayDifference;
+            echo "$dayDifference"."\n";
         }
     }
 
@@ -53,25 +53,25 @@ class Date
         $this->format('ru');
     }
 
-    public function getDateOfWeek(): string
+    public function getDateOfWeek(): void
     {
         $dateSum = $dateName = 0;
         $dateSum = ($this->year * 365) + ($this->month * 31) + $this->day;
         $dateName = $dateSum % 7;
-        return self::$daysOfWeek[$dateName];
+        echo self::$daysOfWeek[$dateName]."\n";
     }
 
     public function format(string $mode): void
     {
         switch ($mode) {
             case 'ru':
-                echo "$this->day.$this->month.$this->year";
+                echo "$this->day.$this->month.$this->year"."\n";
                 break;
             case 'en':
-                echo "$this->year-$this->month-$this->day";
+                echo "$this->year-$this->month-$this->day"."\n";
                 break;
             default:
-                echo "Wrong mode";
+                echo "Wrong mode"."\n";
         }
     }
 }

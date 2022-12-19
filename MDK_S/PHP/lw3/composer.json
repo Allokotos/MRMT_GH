@@ -18,6 +18,6 @@
             "url": "https://github.com/ydekor/github/tree/main/php/lw2"
         }],
     "require": {
-        "allokotos/lw3": "dev-master"
+        "vala/lw2": "dev-master"
     }
 }

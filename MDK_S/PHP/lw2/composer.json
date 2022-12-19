@@ -1,4 +1,17 @@
 {
+    "name": "allokotos/lw2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Allokotos\\Lw3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex M.",
+            "email": "tauren12rus@gmail.com"
+        }
+    ],
     "require-dev": {
         "phpstan/phpstan": "^1.9"
     }

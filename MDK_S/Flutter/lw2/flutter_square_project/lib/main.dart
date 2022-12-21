@@ -35,11 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: const EdgeInsets.all(0),
                 width: 100,
                 height: 100,
                 color: Colors.brown,
@@ -47,23 +45,19 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: const EdgeInsets.all(0),
                 width: 100,
                 height: 100,
                 color: Colors.green,
               ),
               Container(
-                margin: const EdgeInsets.all(0),
                 width: 100,
                 height: 100,
                 color: Colors.red,
               ),
               Container(
-                margin: const EdgeInsets.all(0),
                 width: 100,
                 height: 100,
                 color: Colors.cyan,
@@ -71,11 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: const EdgeInsets.all(0),
                 width: 100,
                 height: 100,
                 color: Colors.black,

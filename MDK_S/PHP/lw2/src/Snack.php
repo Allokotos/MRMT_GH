@@ -1,16 +1,6 @@
 <?php
 
-abstract class ChocolateFactory
-{
-    public function orderSnack(string $type)
-    {
-        $yummie = $this->createSnack($type);
-        $yummie->prepare();
-        $yummie->cutType();
-    }
-
-    public abstract function createSnack(string $type): Snack;
-}
+namespace lw2\src;
 
 abstract class Snack
 {

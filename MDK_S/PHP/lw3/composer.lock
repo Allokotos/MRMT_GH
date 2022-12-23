@@ -1,0 +1,57 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "77662af361c80ca1f313f80e1d909c74",
+    "packages": [
+        {
+            "name": "vala/lw2",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ydekor/for-lw3.git",
+                "reference": "109c4accdb09fdcdb39b8261df378ab8b7c589b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ydekor/for-lw3/zipball/109c4accdb09fdcdb39b8261df378ab8b7c589b4",
+                "reference": "109c4accdb09fdcdb39b8261df378ab8b7c589b4",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.9"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Vala\\Lw3\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "ydekor",
+                    "email": "114324139+ydekor@users.noreply.github.com"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/ydekor/for-lw3/tree/main",
+                "issues": "https://github.com/ydekor/for-lw3/issues"
+            },
+            "time": "2022-12-23T14:40:34+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "vala/lw2": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

@@ -13,11 +13,11 @@
         }
     ],
     "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/ydekor/github/tree/main/php/lw2"
+    {
+        "type": "vcs",
+        "url": "https://github.com/ydekor/for-lw3"
         }],
     "require": {
-        "vala/lw2": "dev-master"
+        "vala/lw2": "dev-main"
     }
 }

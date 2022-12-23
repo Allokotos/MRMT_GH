@@ -1,10 +1,10 @@
 <?php
 
-require_once 'ydekor/github/blob/main/php/lw2/src/pizzaStore.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-use src\pizzaStore;
+use Vala\Lw3\Pizza;
 
-class FourCheese extends pizzaStore
+class FourCheese extends Pizza
 {
     public string $name = "Four Cheese";
     public string $sauce = "Mayonaise";

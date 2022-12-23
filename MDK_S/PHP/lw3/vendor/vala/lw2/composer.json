@@ -1,0 +1,19 @@
+{
+    "name": "vala/lw2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Vala\\Lw3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ydekor",
+            "email": "114324139+ydekor@users.noreply.github.com"
+        }
+    ],
+
+    "require-dev": {
+        "phpstan/phpstan": "^1.9"
+    }
+}

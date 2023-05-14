@@ -32,28 +32,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<WorkerCardData> cardData = <WorkerCardData>[
+    WorkerCardData(image: 'assets/images/100.png', name: 'Joe', job: 'Finance'),
+    WorkerCardData(image: 'assets/images/101.png', name: 'Kate', job: 'Clerk'),
     WorkerCardData(
-        image: Image.asset('assets/images/100.png'),
-        name: 'Joe',
-        job: 'Finance'),
+        image: 'assets/images/102.png', name: 'Barbara', job: 'Chief'),
+    WorkerCardData(image: 'assets/images/104.png', name: 'John', job: 'Cook'),
     WorkerCardData(
-        image: Image.asset('assets/images/101.png'),
-        name: 'Kate',
-        job: 'Clerk'),
-    WorkerCardData(
-        image: Image.asset('assets/images/102.png'),
-        name: 'Barbara',
-        job: 'Chief'),
-    WorkerCardData(
-        image: Image.asset('assets/images/104.png'), name: 'John', job: 'Cook'),
-    WorkerCardData(
-        image: Image.asset('assets/images/105.png'),
-        name: 'Isaac',
-        job: 'IT-specialist'),
-    WorkerCardData(
-        image: Image.asset('assets/images/108.png'),
-        name: 'Kevin',
-        job: 'Head'),
+        image: 'assets/images/105.png', name: 'Isaac', job: 'IT-specialist'),
+    WorkerCardData(image: 'assets/images/108.png', name: 'Kevin', job: 'Head'),
   ];
 
   late ListViewCardsBuilder _builder;
